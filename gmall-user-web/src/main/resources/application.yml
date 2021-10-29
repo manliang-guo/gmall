@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  dubbo:
+    registry:
+      address: 101.34.129.97:2181
+      protocol: zookeeper
+    application:
+      name: gmall-user-web
+    protocol:
+      name: dubbo
+    consumer:
+      check: false
+      timeout: 600000

@@ -1,0 +1,20 @@
+server:
+  port: 8070
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://101.34.129.97:3306/gmall4?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+  dubbo:
+    registry:
+      address: 101.34.129.97:2181
+      protocol: zookeeper
+    application:
+      name: gmall-user
+    protocol:
+      name: dubbo
+    base-package: com.atguigu.gmall
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
